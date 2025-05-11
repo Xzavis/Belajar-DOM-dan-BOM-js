@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Menu</h1>
+    <ul>
+      <li>Teh manis</li>
+      <li>Es Jeruk</li>
+      <li>Cocacola</li>
+    </ul>
+
+    <h2>Pesanan anda adalah:</h2>
+    <p id="pilihan"></p>
+  </body>
+
+  <script>
+    // ambil tag name bernama li
+    const menu = document.getElementsByTagName("li");
+
+    // setelah memilih kita bisa memasukan list menu
+    // tag p bernama pilihan akan dimasukan list yang ditangkap oleh 
+    // document by id
+    document.getElementById("pilihan").innerHTML = menu[0].innerHTML;
+  </script>
+</html>
