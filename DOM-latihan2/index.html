@@ -15,6 +15,13 @@
 
     <h2>Pesanan anda adalah:</h2>
     <p id="pilihan"></p>
+
+    <div>
+      <button class="btn">BELI</button>
+      <button class="btn">BELI</button>
+      <button class="btn">BELI</button>
+      <button class="btn">BELI</button>
+    </div>
   </body>
 
   <script>
@@ -22,8 +29,10 @@
     const menu = document.getElementsByTagName("li");
 
     // setelah memilih kita bisa memasukan list menu
-    // tag p bernama pilihan akan dimasukan list yang ditangkap oleh 
+    // tag p bernama pilihan akan dimasukan list yang ditangkap oleh
     // document by id
     document.getElementById("pilihan").innerHTML = menu[0].innerHTML;
+
+    document.querySelector(".btn-beli");
   </script>
 </html>
