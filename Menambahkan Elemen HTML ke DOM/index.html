@@ -12,17 +12,35 @@
     >
     <ol id="daftar">
       <li id="awal">masukan air kedalam panci</li>
-      <li id="akhir">nyalakan api</li>
+      <li id="akhir">Matikan kompor</li>
     </ol>
     <hr size="2" width="95%" color="#0000" />
   </body>
   <script>
+
+    // menambahkan elemen baru pada li/list pada id daftar
+    // dengan menggunakan metode appendChild()
     const newElement = document.createElement("li");
     undefined;
-    newElement.innerHTML = "Matikan Kompor dan air panas siap disedu";
-    ("Matikan Kompor dan air panas siap disedu");
+    newElement.innerHTML = "selamat menikmati!";
+
     const daftar = document.getElementById("daftar");
     undefined;
     daftar.appendChild(newElement);
+
+    // insertBefore id awal
+    const elementAwal = document.createElement('li');
+    elementAwal.innerText = "Hidupkan kompor terlebih dahulu";
+
+    // element patokan pada id awal
+    const itemAwal = document.getElementById('awal');
+    daftar.insertBefore(elementAwal, itemAwal);
+
+    const elementAkhir = document.createElement('li');
+    elementAkhir.innerText = "tunggu sampai mendidih";
+
+    // element patokan pada id akhir
+    const itemAkhir = document.getElementById('akhir');
+    daftar.insertBefore(elementAkhir, itemAkhir);
   </script>
 </html>
