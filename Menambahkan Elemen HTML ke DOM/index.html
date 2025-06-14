@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="name">langkah-langkah memasak air:</p>
+    <i style="font-size: small; color: red"
+      >lengkapi kata-kata tersebut dengan memasukna elment html dengan DOM</i
+    >
+    <ol id="daftar">
+      <li id="awal">masukan air kedalam panci</li>
+      <li id="akhir">nyalakan api</li>
+    </ol>
+    <hr size="2" width="95%" color="#0000" />
+  </body>
+  <script>
+    const newElement = document.createElement("li");
+    undefined;
+    newElement.innerHTML = "Matikan Kompor dan air panas siap disedu";
+    ("Matikan Kompor dan air panas siap disedu");
+    const daftar = document.getElementById("daftar");
+    undefined;
+    daftar.appendChild(newElement);
+  </script>
+</html>
