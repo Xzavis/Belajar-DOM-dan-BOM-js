@@ -13,11 +13,11 @@
     <ol id="daftar">
       <li id="awal">masukan air kedalam panci</li>
       <li id="akhir">Matikan kompor</li>
+      <button ondblclick="confirm('Hello World')">Click Double me</button>
     </ol>
     <hr size="2" width="95%" color="#0000" />
   </body>
   <script>
-
     // menambahkan elemen baru pada li/list pada id daftar
     // dengan menggunakan metode appendChild()
     const newElement = document.createElement("li");
@@ -29,18 +29,24 @@
     daftar.appendChild(newElement);
 
     // insertBefore id awal
-    const elementAwal = document.createElement('li');
+    const elementAwal = document.createElement("li");
     elementAwal.innerText = "Hidupkan kompor terlebih dahulu";
 
     // element patokan pada id awal
-    const itemAwal = document.getElementById('awal');
+    const itemAwal = document.getElementById("awal");
     daftar.insertBefore(elementAwal, itemAwal);
 
-    const elementAkhir = document.createElement('li');
+    const elementAkhir = document.createElement("li");
     elementAkhir.innerText = "tunggu sampai mendidih";
 
     // element patokan pada id akhir
-    const itemAkhir = document.getElementById('akhir');
+    const itemAkhir = document.getElementById("akhir");
     daftar.insertBefore(elementAkhir, itemAkhir);
+
+    function alert(string) {
+      console.log(string);
+    }
+
+    alert("Dicoding Indonesia");
   </script>
 </html>
