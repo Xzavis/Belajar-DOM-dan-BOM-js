@@ -9,11 +9,36 @@
   </head>
   <body>
     <div class="content" align="center" hidden>
-      <button id="incrementButton">Click me</button>
+      <button id="incrementButton">Click me :)</button>
       <h3>Kamu sudah menekan tombol sebanyak <span id="count">0</span></h3>
     </div>
   </body>
   <script>
+    // function handler button onclick
+    function increment() {
+      // dibawah ini kita akan mengambil nilai dari span id="count"
+      // dan akan bertambah 1
+      document.getElementById('count').innerText++;
+
+      // percabangan untuk sampai pada nilai 7
+      if (document.getElementById('count').innerText == 7) {
+        // membuat element html baru
+        const hiddenMessage = document.createElement('h4');
+        // memasukan text kedalaman element
+        hiddenMessage.innerText = "Selamat! anda menemukan hadiah tersembunyi";
+
+        const image = document.createElement("img");
+        image.setAttribute(
+          "src",
+          "https://raw.githubusercontent.com/dicodingacademy/a315-web-pemula-labs/shared-files/catto.jpg"
+        );
+
+        // menyisipkan element baru ke dalam element content
+        const contents = document.querySelector('.content');
+        contents.appendChild(hiddenMessage).appendChild(image);
+      }
+    }
+    
     function welcome() {
       alert("adakadabra muncul element-elemen HTML");
 
@@ -21,14 +46,9 @@
       const contents = document.querySelector(".content");
       contents.removeAttribute("hidden");
     }
-    document.body.onload = welcome();
-
-    // function handler button onclick
-    function increment() {
-      document.getElementById("count").innerText++;
-    }
 
     // menambahkan event listener pada button
     document.getElementById("incrementButton").onclick = increment;
+    document.body.onload = welcome;
   </script>
 </html>
