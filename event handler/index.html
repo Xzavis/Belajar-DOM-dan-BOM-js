@@ -8,9 +8,21 @@
     <title>Document</title>
   </head>
   <body>
+
     <div class="content" align="center" hidden>
       <button id="incrementButton">Click me</button>
       <h3>Kamu sudah menekan tombol sebanyak <span id="count">0</span></h3>
     </div>
+
   </body>
+  <script>
+    function welcome(){
+        alert('adakadabra muncul element-elemen HTML');
+
+        // kita panggil classname content
+        const contents = document.querySelector('.content');
+        contents.removeAttribute('hidden');
+    }
+    document.body.onload = welcome();
+  </script>
 </html>
