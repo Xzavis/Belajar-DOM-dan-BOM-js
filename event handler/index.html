@@ -7,23 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
+  <body onload="welcome()">
     <div class="content" align="center" hidden>
-      <button id="incrementButton">Click me :)</button>
+      <button id="incrementButton" onclick="increment()">Click me :)</button>
       <h3>Kamu sudah menekan tombol sebanyak <span id="count">0</span></h3>
     </div>
   </body>
   <script>
+    function welcome() {
+      alert("adakadabra muncul element-elemen HTML");
+
+      // kita panggil classname content
+      const contents = document.querySelector(".content");
+      contents.removeAttribute("hidden");
+    }
+
+    // menambahkan event listener pada button
+    // document.getElementById("incrementButton").onclick = increment;
+    // document.body.onload = welcome;
+
     // function handler button onclick
     function increment() {
       // dibawah ini kita akan mengambil nilai dari span id="count"
       // dan akan bertambah 1
-      document.getElementById('count').innerText++;
+      document.getElementById("count").innerText++ ;
 
       // percabangan untuk sampai pada nilai 7
-      if (document.getElementById('count').innerText == 7) {
+      if (document.getElementById("count").innerText == 7) {
         // membuat element html baru
-        const hiddenMessage = document.createElement('h4');
+        const hiddenMessage = document.createElement("h4");
         // memasukan text kedalaman element
         hiddenMessage.innerText = "Selamat! anda menemukan hadiah tersembunyi";
 
@@ -34,21 +46,9 @@
         );
 
         // menyisipkan element baru ke dalam element content
-        const contents = document.querySelector('.content');
+        const contents = document.querySelector(".content");
         contents.appendChild(hiddenMessage).appendChild(image);
       }
     }
-    
-    function welcome() {
-      alert("adakadabra muncul element-elemen HTML");
-
-      // kita panggil classname content
-      const contents = document.querySelector(".content");
-      contents.removeAttribute("hidden");
-    }
-
-    // menambahkan event listener pada button
-    document.getElementById("incrementButton").onclick = increment;
-    document.body.onload = welcome;
   </script>
 </html>
