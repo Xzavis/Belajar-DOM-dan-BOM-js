@@ -26,17 +26,18 @@
     </div>
 
     <script>
-      const divs = Array.from(document.getElementsByTagName("div"));
+        // panggil tag div berdasarkan nama tag
+        const divs = document.getElementsByTagName("div");
 
-      divs.forEach((div) => {
-        div.addEventListener(
-          "click",
-          () => {
-            alert(`ELEMEN ${div.getAttribute("id").toUpperCase()}`);
-          },
-          true
-        );
-      });
+        //   looping
+        for (let el of divs) {
+          // el akan melooping sebuah function ketika di click
+          el.addEventListener('click', function(){
+            // akan menapilkan peringatan ketika function berhasil
+            // dijalankan
+            alert('ELEMENT ' + el.getAttribute('id').toUpperCase())
+          }, true)
+      }
     </script>
   </body>
 </html>
