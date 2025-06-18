@@ -23,6 +23,6 @@ function welcome() {
 }
 
 // kita akan menulis kode menggunakan addEventListener di sini
-window.addEventListener('load', welcome);
+window.addEventListener('load', welcome());
 
 document.getElementById('incrementButton').addEventListener('click', increment);
